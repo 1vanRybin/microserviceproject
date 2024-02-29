@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Dal.Users.Models;
+using Core.Dal;
 
-namespace Logic.Users.Models
+namespace Dal.Users.Models
 {
-    public class UserLogic
+    public record UserDal : BaseEntityDal<Guid>
     {
         public required string Username { get; set; }
         public required string Email { get; set; }
