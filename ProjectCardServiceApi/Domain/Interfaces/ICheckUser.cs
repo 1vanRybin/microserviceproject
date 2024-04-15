@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Dal
+namespace Domain.Interfaces
 {
-    public record BaseEntityDal<T>
+    public interface ICheckUser
     {
-        public T Id { get; init; }
+        Task CheckUserExistAsync(Guid userId);
     }
 }
